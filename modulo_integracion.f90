@@ -3,14 +3,16 @@ use iso
 use mod_funciones
 
 implicit none
+
+contains
         subroutine simpson(a, b , n, f, sx)
                 !Descripcion del metodo 
                 !Regla de Simpson Compuesta de integracion numerica
                 !Declaracion de variables
                 real(wp), intent(in)        :: a , b !extremos de integracion
-                real(wp), intent(in)        :: f     !funcion f
+                real(wp)                    :: f     !funcion f
                 real(wp), intent(out)       :: sx    !Valor de la integral definida
-                integer(il) intent(in)      :: n     !numero par para particionar
+                integer(il), intent(in)      :: n     !numero par para particionar
                 
                 !Declaracion de variables auxilares
                 real(wp)                :: h        !longitud del intervarlo
